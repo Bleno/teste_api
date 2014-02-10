@@ -1,0 +1,5 @@
+class Pessoa():
+	nm_pessoa = None
+	idade = None
+	id_pessoa = None
+
