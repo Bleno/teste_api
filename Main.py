@@ -20,7 +20,7 @@ headers = { 'User-Agent' : user_agent }
 
 def FormInput():
     try:
-        p.nm_pessoa = str(raw_input("digite o nome da pessoa: "))
+        p.nm_nome = str(raw_input("digite o nome da pessoa: "))
 
         p.idade = int(input("digite a idade da pessoa: "))
     except:
@@ -30,9 +30,10 @@ def FormInput():
 def SendData():
     FormInput()
     dados = json.dumps(p, default=lambda o: o.__dict__)  #Convertendo dicionario objeto para jsons
-    dadosEnviar = {'json_reg':dados}
+    dadosEnviar = {'json_reg': str(dados)}
+    data = urllib.urlencode(dadosEnviar)
     try:
-        req = urllib2.Request(url, str(dadosEnviar), headers)
+        req = urllib2.Request(url, data, headers)
         response = urllib2.urlopen(req)
         the_page = response.read()
     except urllib2.HTTPError as e:

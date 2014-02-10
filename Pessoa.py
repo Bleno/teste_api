@@ -1,4 +1,4 @@
 class Pessoa():
-	nm_pessoa = None
+	nm_nome = None
 	idade = None
 	
