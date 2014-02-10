@@ -20,7 +20,7 @@ headers = { 'User-Agent' : user_agent }
 
 def FormInput():
     try:
-        p.nm_pessoa = str(raw_input("digite o nome da pessoa: "))
+        p.nm_nome = str(raw_input("digite o nome da pessoa: "))
 
         p.idade = int(input("digite a idade da pessoa: "))
     except:

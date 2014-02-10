@@ -36,6 +36,7 @@ def SendData():
         req = urllib2.Request(url, data, headers)
         response = urllib2.urlopen(req)
         the_page = response.read()
+        print the_page
     except urllib2.HTTPError as e:
         print "Ocorreu um erro na requisição http.\n Status: %s" % str(e.code)
         print e.read()
