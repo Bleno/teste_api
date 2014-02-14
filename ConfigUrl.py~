@@ -1,0 +1,14 @@
+#!/usr/bin/python
+# -*- encoding: utf-8 -*-
+
+class URLBASE():
+	urlBase = ""
+
+
+def urlpath():
+	f = open("url.conn","r")
+	p = f.readline().rfind("=") #pega a posição do =
+	f.seek(0)	#retorn o ponteiro pra o posição inicial do arquivo
+	path = f.readline()[p+1:].strip() #coloca o cursor a frente e le o restande do conteudo da linha
+	return path
+

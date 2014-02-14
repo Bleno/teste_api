@@ -1,0 +1,4 @@
+{"field":"idade","term":"1","operator":">"}
+
+
+$$={"filters":[{"field":"nome","term":"33333","operator":"="}]}
